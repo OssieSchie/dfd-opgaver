@@ -5,8 +5,82 @@
     --color-text-button: #FFF;
 
     /* Når du synes, du er færdig, så ændr værdien herunder til '1' for at se dit resultat i browseren */
-    --hide-overlay: 0;
+    --hide-overlay: 1;
 }
 
 
 /* Begynd her... */
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h1{
+        font-family: impact;
+        font-size: 300%;
+        color: var(--color-heading);
+    }
+    p{
+        font-family: Impact;
+        font-weight: lighter;
+        color: var(--color-body);
+    }
+    button{
+        padding: 2ch 3ch 2ch 3ch;
+        background-color: var(--color-bg-button);
+        color: var(--color-text-button);
+    }
+}
+.right{
+    aspect-ratio: 1/1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 5ch;
+
+    img{
+        border-radius: 10ch;
+        max-width: fit-content;
+        max-height: fit-content;
+    }
+
+    #img1{
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    #img2{
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    #img3{
+        grid-column: 2/3;
+        grid-row: 2/4;
+    }
+    #img4{
+        grid-column: 3/4;
+        grid-row: 2/3;
+        }
+    #img5{
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    #img6{
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    #img7{
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+}
+
+@media screen and (max-width: 450px){
+    main{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+}
