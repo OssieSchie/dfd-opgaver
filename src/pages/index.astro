@@ -36,7 +36,24 @@ import { cardContent } from "../data/card-content.js";
 <style>
   main {
     padding-block: 4rem; /* Kun af æstetiske årsager */
+    
+  }
+
+  header > * {
+    max-width: 75ch;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: min(3rem, 5%);
+  }
+  h2{
+    box-sizing: border-box;
+    margin: 1rem auto 1rem auto;
   }
   section {
+    display: grid;
+    grid-template-rows: 1fr auto;
   }
+  
 </style>
